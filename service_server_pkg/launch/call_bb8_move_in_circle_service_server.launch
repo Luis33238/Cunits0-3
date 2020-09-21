@@ -1,0 +1,5 @@
+<launch>
+    <!-- My Package launch file -->
+    <node pkg="service_server_pkg" type="bb8_move_in_circle_service_server" name="ObiWan"  output="screen">
+    </node>
+</launch>
