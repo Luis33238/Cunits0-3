@@ -1,0 +1,5 @@
+<launch>
+    <!-- My Package launch file -->
+    <node pkg="services_quiz" type="call_bb8_move_custom_service_server" name="ObiWan2"  output="screen">
+    </node>
+</launch>

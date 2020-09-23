@@ -1,4 +1,0 @@
-float64 side    # The number of times BB-8 has to execute the square movement when the service is called
-int32 repetitions  # number of repeats 
----
-bool success         # Did it achieve it?

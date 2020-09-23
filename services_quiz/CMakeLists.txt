@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(my_custom_srv_msg_pkg)
+project(services_quiz)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -102,8 +102,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  CATKIN_DEPENDS
-  roscpp
+  CATKIN_DEPENDS roscpp
 )
 
 ###########
@@ -119,7 +118,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/my_custom_srv_msg_pkg.cpp
+#   src/${PROJECT_NAME}/services_quiz.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -130,7 +129,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/my_custom_srv_msg_pkg_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/services_quiz_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -194,10 +193,20 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_my_custom_srv_msg_pkg.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_services_quiz.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(bb8_move_custom_service_server src/bb8_move_custom_service_server.cpp)
+add_dependencies(bb8_move_custom_service_server ${bb8_move_custom_service_server_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(bb8_move_custom_service_server
+   ${catkin_LIBRARIES}
+ )
+add_executable(call_bb8_move_custom_service_server src/call_bb8_move_custom_service_server.cpp)
+add_dependencies(call_bb8_move_custom_service_server ${call_bb8_move_custom_service_server_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(call_bb8_move_custom_service_server
+   ${catkin_LIBRARIES}
+ )
