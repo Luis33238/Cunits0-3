@@ -1,0 +1,11 @@
+<launch>
+
+
+  <node pkg ="move_robot"
+        type="main.py"
+        name="move_robot_node"
+        output="screen">
+  </node>
+
+
+</launch>

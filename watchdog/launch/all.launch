@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg ="watchdog"
+        type="main.py"
+        name="watchdog_node"
+        output="screen">
+
+  </node>
+
+</launch>

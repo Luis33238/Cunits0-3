@@ -1,0 +1,27 @@
+<launch>
+
+  <node pkg ="all"
+        type="main.py"
+        name="all_node"
+        output="screen">
+  </node>
+
+  <node pkg ="move_robot"
+        type="main.py"
+        name="move_robot_node"
+        output="screen">
+  </node>
+
+    <node pkg ="watchdog"
+        type="main.py"
+        name="watchdog_node"
+        output="screen">
+  </node>
+
+    <node pkg ="keyboard_input"
+        type="main.py"
+        name="keyboard_input_node"
+        output="screen">
+  </node>
+
+</launch>

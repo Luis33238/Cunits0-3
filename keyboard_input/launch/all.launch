@@ -1,0 +1,9 @@
+<launch>
+
+    <node pkg ="keyboard_input"
+        type="main.py"
+        name="keyboard_input_node"
+        output="screen">
+  </node>
+
+</launch>

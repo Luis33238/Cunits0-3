@@ -1,0 +1,5 @@
+<launch>
+    <!-- My Package launch file -->
+    <node pkg="actions_quiz" type="custom_action_quiz" name="obi_wan"  output="screen">
+    </node>
+</launch>
