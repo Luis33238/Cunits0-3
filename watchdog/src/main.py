@@ -35,4 +35,3 @@ while(True):
         pub.publish(tw)
         #print "timeout"
     t.sleep(0.1)
-rospy.spin()
