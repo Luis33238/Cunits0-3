@@ -1,0 +1,21 @@
+<launch>
+
+  <node pkg ="demo1"
+        type="main.py"
+        name="demo1_node"
+        output="screen">
+  </node>
+
+  <node pkg ="move_robot"
+        type="main.py"
+        name="move_robot_node"
+        output="screen">
+  </node>
+
+    <node pkg ="keyboard_input"
+        type="main.py"
+        name="keyboard_input_node"
+        output="screen">
+  </node>
+
+</launch>

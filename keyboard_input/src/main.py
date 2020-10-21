@@ -11,6 +11,6 @@ pub = rospy.Publisher('/key_press', String, queue_size=1)
 
 
 while(True):
-    val = raw_input("Input W/A/S/D: ")
+    val = raw_input("Input Frequency: ")
     print(val)
     pub.publish(val)
